@@ -35,6 +35,12 @@ jobs:
             --cov-report=term \
             --cov-report=xml
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: coverage.xml
+        
+
   deploy: 
     needs: run-tests
     runs-on: ubuntu-latest
