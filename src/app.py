@@ -1,35 +1,39 @@
-def add (a, b):
-    return a+b
+import math
 
-def sub (a, b):
-    return a-b
+class Calculator:
 
-def multiply(self, a, b):
-    return a * b
+    def add(self, a, b):
+        return a + b
 
-def divide(self, a, b):
-   if b == 0:
-        raise ValueError("Division by zero")
-    return a / b
+    def subtract(self, a, b):
+        return a - b
 
-def log(self, x):
-    if x <= 0:
-        raise ValueError("Log undefined for zero or negative values")
-    return math.log(x)
+    def multiply(self, a, b):
+        return a * b
 
-def square(self, x):
-    return x * x
+    def divide(self, a, b):
+        if b == 0:
+            raise ValueError("Division by zero")
+        return a / b
 
-def sin(self, x):
-    return math.sin(x)
+    def log(self, x):
+        if x <= 0:
+            raise ValueError("Log undefined for zero or negative values")
+        return math.log(x)
 
-def cos(self, x):
-    return math.cos(x)
+    def square(self, x):
+        return x * x
 
-def sqrt(self, x):
-    if x < 0:
-        raise ValueError("Square root undefined for negative values")
-    return math.sqrt(x)
+    def sin(self, x):
+        return math.sin(x)
 
-def percentage(self, a, b):
-    return (a / 100) * b
+    def cos(self, x):
+        return math.cos(x)
+
+    def sqrt(self, x):
+        if x < 0:
+            raise ValueError("Square root undefined for negative values")
+        return math.sqrt(x)
+
+    def percentage(self, a, b):
+        return (a / 100) * b
